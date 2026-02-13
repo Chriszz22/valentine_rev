@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Nazwaa Alifa Dwi Agustina ❤️</title>
+<h3 style="opacity:0.7;">Website kecil dari Kriss untuk sayangg 🤍</h3>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:linear-gradient(to bottom,#cfefff,#eaf9ff);
+  overflow-x:hidden;
+  text-align:center;
+  color:#2b3a55;
+}
+
+/* awan */
+.cloud{
+  position:fixed;
+  top:0;
+  left:-200px;
+  width:180px;
+  opacity:0.7;
+  animation:cloudMove linear infinite;
+}
+.cloud:nth-child(1){top:40px;animation-duration:60s;}
+.cloud:nth-child(2){top:120px;animation-duration:80s;}
+.cloud:nth-child(3){top:200px;animation-duration:100s;}
+
+@keyframes cloudMove{
+  from{transform:translateX(0);}
+  to{transform:translateX(120vw);}
+}
+
+/* overlay */
+.overlay{
+  background:rgba(255,255,255,0.6);
+  min-height:100vh;
+  padding:30px;
+  backdrop-filter:blur(6px);
+}
+
+/* tombol */
+button{
+  padding:12px 22px;
+  border:none;
+  border-radius:25px;
+  background:#8fd3ff;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  margin:12px;
+  box-shadow:0 0 15px #aee4ff;
+}
+
+/* galeri */
+.gallery img{
+  width:170px;
+  height:170px;
+  object-fit:cover;
+  margin:10px;
+  border-radius:25px;
+  box-shadow:0 0 20px #bde9ff;
+}
+
+/* surat */
+.letter{
+  background:rgba(255,255,255,0.85);
+  padding:25px;
+  margin:30px auto;
+  max-width:520px;
+  border-radius:25px;
+  line-height:1.8;
+}
+
+/* love */
+.hearts span{
+  position:fixed;
+  bottom:-50px;
+  font-size:22px;
+  animation:floatUp 8s linear infinite;
+}
+
+@keyframes floatUp{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-100vh);}
+}
+
+/* bunga */
+.flowers span{
+  position:fixed;
+  top:-50px;
+  font-size:22px;
+  animation:fall 10s linear infinite;
+}
+
+@keyframes fall{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(110vh);}
+}
+
+/* bintang */
+.stars span{
+  position:fixed;
+  bottom:0;
+  font-size:14px;
+  animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:0.2;}
+  to{opacity:1;}
+}
+
+/* popup */
+.popup{
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.4);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.popup-box{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+let password = prompt("Masukkan kode rahasia 💙");
+
+if(password !== "sayangkriss"){
+  document.body.innerHTML="<h2 style='margin-top:40vh'>Ini bukan buat kamu 💔</h2>";
+}
+</script>
+
+<!-- awan -->
+<img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" class="cloud">
+<img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" class="cloud">
+<img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" class="cloud">
+
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <h2>Hai sayangg 💙</h2>
+    <p>Aku ada sesuatu buat kamu...</p>
+    <button onclick="start()">Buka 💌</button>
+  </div>
+</div>
+
+<audio id="lagu" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="overlay">
+
+<h1 id="title"></h1>
+
+<div>Kriss 💕 Nazwaa </div>
+
+<div id="timer"></div>
+
+<button onclick="playMusic()">Putar musik 🎵</button>
+<button onclick="hug()">Peluk kriss 🤍</button>
+
+<div class="gallery">
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+</div>
+
+<div class="letter">
+<h2>Untuk sayanggku tercintaa 💌</h2>
+
+<p>
+Happy Valentine ya sayangg ❤️  
+
+Terima kasih sudah hadir di hidup kriss.  
+Terima kasih sudah bertahan sejauh ini.  
+
+Kriss senang bisa kenal sayangg,  
+senang bisa cerita sama sayangg,  
+dan senang bisa punya sayangg.  
+
+Semoga kita selalu sama-sama ya,  
+lewat semuanya bareng,  
+dan terus saling sayang sampai kapanpun.  
+
+I love you more than anything.  
+
+– Kriss 🤍
+</p>
+</div>
+
+<button onclick="showReasons()">Kenapa kriss sayangg nazwaa? 💙</button>
+
+<div id="reasons" style="display:none;">
+  <div class="letter">
+    sayangg baik 🤍 <br>
+    sayangg perhatian 🤍 <br>
+    sayangg selalu ada 🤍 <br>
+    sayangg bikin aku nyaman 🤍 <br>
+    sayangg jadi rumah buat kriss 🤍
+  </div>
+</div>
+
+<div id="finalMessage" style="display:none;margin:100px 0;font-size:20px;">
+  fokonaa Kriss sayanggg zangattt amaa nazwaa lop lop 💙
+</div>
+
+</div>
+
+<div class="hearts"></div>
+<div class="flowers"></div>
+<div class="stars"></div>
+
+<script>
+
+/* judul */
+let text="Happy Valentine ❤️";
+let i=0;
+function typeTitle(){
+  if(i<text.length){
+    document.getElementById("title").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typeTitle,80);
+  }
+}
+
+function start(){
+  document.getElementById("popup").style.display="none";
+  typeTitle();
+}
+
+/* musik */
+function playMusic(){
+  let music=document.getElementById("lagu");
+  music.volume=0;
+  music.play();
+  let fade=setInterval(()=>{
+    if(music.volume<1){music.volume+=0.05;}
+    else clearInterval(fade);
+  },200);
+}
+
+/* peluk */
+function hug(){ alert("Kriss peluk sayangg 🤍"); }
+
+/* alasan */
+function showReasons(){
+  document.getElementById("reasons").style.display="block";
+}
+
+/* timer */
+let startDate=new Date("2024-10-25");
+setInterval(()=>{
+  let now=new Date();
+  let days=Math.floor((now-startDate)/(1000*60*60*24));
+  document.getElementById("timer").innerHTML="Sudah bareng selama "+days+" hari 💙";
+},1000);
+
+/* love */
+setInterval(()=>{
+  let heart=document.createElement("span");
+  heart.innerHTML="💙";
+  heart.style.left=Math.random()*100+"vw";
+  document.querySelector(".hearts").appendChild(heart);
+  setTimeout(()=>heart.remove(),8000);
+},600);
+
+/* bunga */
+setInterval(()=>{
+  let flower=document.createElement("span");
+  flower.innerHTML="🌸";
+  flower.style.left=Math.random()*100+"vw";
+  document.querySelector(".flowers").appendChild(flower);
+  setTimeout(()=>flower.remove(),10000);
+},1200);
+
+/* bintang + mode malam */
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>400){
+    document.body.style.background="linear-gradient(to bottom,#0f2027,#203a43,#2c5364)";
+    let star=document.createElement("span");
+    star.innerHTML="⭐";
+    star.style.left=Math.random()*100+"vw";
+    document.querySelector(".stars").appendChild(star);
+    setTimeout(()=>star.remove(),5000);
+  }
+
+  if(window.innerHeight+window.scrollY>=document.body.offsetHeight){
+    document.getElementById("finalMessage").style.display="block";
+  }
+});
+
+</script>
+
+</body>
+</html>
